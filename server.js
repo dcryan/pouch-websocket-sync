@@ -21,7 +21,8 @@ function createServer(httpServer, onRequest) {
     ];
     
     if (ignoreErrorMessages.indexOf(err.message) < 0) {
-      wsserver.emit('error', err);
+      console.log('error', err);
+      // wsserver.emit('error', err);
     }
   }
   
