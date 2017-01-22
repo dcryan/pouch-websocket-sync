@@ -5,7 +5,8 @@ function createClient() {
   /* istanbul ignore next */
   function onError(err) {
     if (err.message !== 'write after end') {
-      client.emit('error', err);
+      console.log('error', err);
+      //client.emit('error', err);
     }
   }
   
@@ -16,7 +17,6 @@ function createClient() {
   });
   
   return client;
-
 }
 
 module.exports = createClient;
